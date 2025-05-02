@@ -57,7 +57,7 @@ const AboutSection = () => {
             <div className="relative w-64 h-64 md:w-80 md:h-80">
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-primary/60 blur-lg animate-pulse"></div>
               <img 
-                src="public/profile.jpg" 
+                src="profile.jpg" 
                 alt="Kothamasu Uday" 
                 className="rounded-full w-full h-full object-cover border-4 border-background relative z-10"
               />
