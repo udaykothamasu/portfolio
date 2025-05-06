@@ -10,9 +10,18 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0 animate-fade-in">
             <h2 className="text-lg font-semibold gradient-text">Kothamasu Uday</h2>
-            <p className="text-sm text-muted-foreground">
-              Computer Science Engineer
-            </p>
+            <p>
+  Developed by{" "}
+  <a
+    href="https://indivar-bolisetty.vercel.app/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-600 hover:underline dark:text-blue-400"
+  >
+    Bolisetty Indivar
+  </a>
+</p>
+
           </div>
           
           <div className="flex items-center space-x-4 mb-6 md:mb-0">
