@@ -21,7 +21,7 @@ const EducationSection = () => {
     },
     {
       degree: "Secondary School Certificate (SSC)",
-      institution: "Bharathi High School",
+      institution: "Bhashyam High School",
       duration: "2019 - 2020",
       location: "Repalle, Andhra Pradesh",
       description: "Completed secondary education with 98%."

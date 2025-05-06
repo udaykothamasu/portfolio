@@ -1,13 +1,13 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle2, Cloud, Cpu, Code, Database, Server } from "lucide-react";
+import { CheckCircle2, Cloud, Cpu, Code, Database, Server, LineChart, BarChart, TrendingUp, DollarSign } from "lucide-react";
 
 const SkillsSection = () => {
   const skillCategories = [
     {
       title: "MERN Stack Development",
       icon: <Code className="w-5 h-5 text-primary" />,
-      skills: ["MongoDB", "Express.js",  "Node.js", "TypeScript"]
+      skills: ["MongoDB", "Express.js", "React.js", "Node.js"]
     },
     {
       title: "Frontend Development",
@@ -23,6 +23,18 @@ const SkillsSection = () => {
       title: "Cloud Computing",
       icon: <Cloud className="w-5 h-5 text-primary" />,
       skills: ["AWS Services", "Serverless Architecture", "Cloud Deployment", "EC2", "S3"]
+    },
+    {
+      title: "Stock Market & Trading",
+      icon: <LineChart className="w-5 h-5 text-primary" />,
+      skills: [
+        "Technical Analysis",
+        "Fundamental Analysis",
+        "Risk Management",
+        "Chart Patterns",
+        "Market Trends",
+        "Portfolio Management"
+      ]
     },
   ];
 
@@ -61,8 +73,8 @@ const SkillsSection = () => {
         
         <div className="mt-20 text-center">
           <div className="inline-flex items-center px-6 py-3 border border-border rounded-full text-sm text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300">
-            <Cloud className="w-4 h-4 mr-2" />
-            Continuously expanding my skills in cloud computing and emerging technologies
+            <TrendingUp className="w-4 h-4 mr-2" />
+            Continuously expanding my skills in both technology and financial markets
           </div>
         </div>
       </div>

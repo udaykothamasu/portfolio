@@ -38,7 +38,7 @@ const AboutSection = () => {
     {
       icon: <Mail className="h-5 w-5" />,
       title: "Email",
-      content: "uday2012.in@gmail.com"
+      content: "uday2003.in@gmail.com"
     },
     {
       icon: <Award className="h-5 w-5" />,

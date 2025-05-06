@@ -1,132 +1,113 @@
 import React, { useEffect, useRef } from "react";
+import { Code, Globe, Cloud } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Award, Code, Globe, Cloud } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface Certification {
   title: string;
   issuer: string;
-  date: string;
   description: string;
   icon: JSX.Element;
-  color: string;
-  link: string;
+  file: string;
 }
 
-const CertificationsSection: React.FC = () => {
-  const certifications: Certification[] = [
-    {
-      title: "Python Programming",
-      issuer: "GYAN Academy",
-      date: "2023",
-      description: "Comprehensive training in Python programming including data structures, algorithms, and application development.",
-      icon: <Code className="h-6 w-6" />,
-      color: "bg-gradient-to-br from-blue-500 to-sky-400",
-      link: "K.Uday Cert.pdf" // Relative to public/ directory
-    },
-    {
-      title: "JAVA Programming Fundamentals",
-      issuer: "EdX",
-      date: "2023",
-      description: "Fundamental understanding of Java programming language, OOP concepts, and application development.",
-      icon: <Code className="h-6 w-6" />,
-      color: "bg-gradient-to-br from-orange-500 to-amber-400",
-      link: "Kothamasu Uday venkata pandu ranga krishna (1).pdf"
-    },
-    {
-      title: "Web Development",
-      issuer: "OCTANET",
-      date: "2023",
-      description: "Full stack web development training covering HTML, CSS, JavaScript, and modern frameworks.",
-      icon: <Globe className="h-6 w-6" />,
-      color: "bg-gradient-to-br from-green-500 to-emerald-400",
-      link: "Octanet.pdf"
-    },
-    {
-      title: "AWS Cloud Computing",
-      issuer: "APSSDC",
-      date: "2023",
-      description: "Cloud infrastructure management using AWS services including EC2, S3, and Lambda functions.",
-      icon: <Cloud className="h-6 w-6" />,
-      color: "bg-gradient-to-br from-purple-500 to-violet-400",
-      link: "KOTHAMASU UDAY VENKATA PANDU RANGA KRISHNA (2).pdf"
-    }
-  ];
+const certifications: Certification[] = [
+  {
+    title: "Python Programming",
+    issuer: "GYAN Academy",
+    description: "Learned Python fundamentals including data structures and algorithms.",
+    icon: <Code className="h-6 w-6 text-blue-500" />,
+    file: "K.Uday Cert.pdf",
+  },
+  {
+    title: "JAVA Programming Fundamentals",
+    issuer: "EdX",
+    description: "Covered core Java, OOP principles, and basic application building.",
+    icon: <Code className="h-6 w-6 text-orange-500" />,
+    file: "Kothamasu Uday venkata pandu ranga krishna (1).pdf",
+  },
+  {
+    title: "Web Development",
+    issuer: "OCTANET",
+    description: "Built responsive UIs with HTML, CSS, JavaScript and React.",
+    icon: <Globe className="h-6 w-6 text-green-500" />,
+    file: "Octanet.pdf",
+  },
+  {
+    title: "AWS Cloud Computing",
+    issuer: "APSSDC",
+    description: "Hands-on experience with AWS EC2, S3, and Lambda.",
+    icon: <Cloud className="h-6 w-6 text-purple-500" />,
+    file: "KOTHAMASU UDAY VENKATA PANDU RANGA KRISHNA (2).pdf",
+  },
+];
 
-  // Refs for the certificates to implement animation
-  const certRefs = useRef<(HTMLDivElement | null)[]>([]);
+const CertificationsSection: React.FC = () => {
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
+      (entries) =>
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("animate-fade-in");
+            entry.target.classList.add("animate-fade-up");
+            entry.target.classList.remove("opacity-0");
           }
-        });
-      },
-      { threshold: 0.1 }
+        }),
+      { threshold: 0.2 }
     );
 
-    certRefs.current.forEach((ref) => {
+    cardRefs.current.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
 
     return () => {
-      certRefs.current.forEach((ref) => {
+      cardRefs.current.forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });
     };
   }, []);
 
-  const handleViewCertificate = (link: string) => {
-    if (!link) {
-      alert("Certificate link is unavailable.");
-      return;
-    }
-    try {
-      // Use PUBLIC_URL for base path (works with CRA, Vite, etc.)
-      const baseUrl = process.env.PUBLIC_URL || "";
-      // Remove 'public/' prefix if present, as files in public/ are served from root
-      const normalizedLink = link.startsWith("public/") ? link.replace("public/", "") : link;
-      const fullUrl = link.startsWith("http") ? link : `${baseUrl}/${normalizedLink}`;
-      window.open(fullUrl, "_blank", "noopener,noreferrer");
-    } catch (error) {
-      console.error("Failed to open certificate:", error);
-      alert("Failed to open certificate. Please try again later.");
-    }
+  const handleViewCertificate = (file: string) => {
+    const url = `/${file}`;
+    fetch(url)
+      .then((res) => {
+        if (res.ok) {
+          window.open(url, "_blank");
+        } else {
+          alert("Certificate not found.");
+        }
+      })
+      .catch(() => {
+        alert("Error accessing certificate.");
+      });
   };
 
   return (
-    <section id="certifications" className="section-padding bg-secondary/10">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-12 text-center">Certifications</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <section id="certifications" className="py-16 bg-secondary/10 dark:bg-background">
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-10 text-foreground">Certifications</h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {certifications.map((cert, index) => (
             <div
               key={index}
-              ref={(el) => (certRefs.current[index] = el)}
-              className="opacity-0"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              ref={(el) => (cardRefs.current[index] = el)}
+              className="opacity-0 transform transition-all duration-700"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              <Card className="certificate-card h-full border border-border/50 overflow-hidden hover:shadow-lg transition-shadow">
-                <CardContent className="p-0 h-full">
-                  <div className={`${cert.color} h-3`}></div>
-                  <div className="p-6 flex flex-col h-full">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4">
-                      {cert.icon}
-                    </div>
-                    
-                    <h3 className="text-xl font-semibold mb-2">{cert.title}</h3>
-                    <div className="flex justify-between items-center mb-4">
-                      <span className="text-sm text-muted-foreground">{cert.issuer}</span>
-                      <span className="text-xs bg-secondary px-2 py-1 rounded-full">{cert.date}</span>
-                    </div>
-                    
-                    <p className="text-muted-foreground flex-grow">{cert.description}</p>
-                  </div>
-                </CardContent>
+              <Card className="flex flex-col items-start p-6 border border-border bg-white dark:bg-muted dark:border-border/40 hover:shadow-lg transition-shadow hover:scale-[1.03] duration-300 rounded-lg">
+                <div className="mb-4">{cert.icon}</div>
+                <h3 className="text-lg font-semibold text-foreground mb-1">{cert.title}</h3>
+                <p className="text-sm text-muted-foreground mb-2">{cert.issuer}</p>
+                <p className="text-sm text-muted-foreground mb-4">{cert.description}</p>
+                <Button
+                  onClick={() => handleViewCertificate(cert.file)}
+                  className="mt-auto w-full"
+                  variant="outline"
+                >
+                  View Certificate
+                </Button>
               </Card>
             </div>
           ))}

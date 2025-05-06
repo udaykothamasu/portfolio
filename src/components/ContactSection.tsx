@@ -23,7 +23,7 @@ const ContactSection = () => {
     {
       name: "Email",
       icon: <Mail className="h-6 w-6" />,
-      url: "mailto:uday2012.in@gmail.com",
+      url: "mailto:uday2003.in@gmail.com",
       color: "hover:bg-[#EA4335] hover:border-[#EA4335]"
     },
     {
