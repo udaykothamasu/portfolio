@@ -10,14 +10,14 @@ const ProjectsSection = () => {
       description: "An autonomous rover built with Arduino and sensors for obstacle avoidance and environment mapping. Implemented path-finding algorithms and real-time data processing.",
       image: "/Project_1.png",
       tags: ["Electronics", "Embedded Systems", "Arduino", "IoT"],
-      reports: "public/Project_1_Report.pdf",
+      reports: "Project_1_Report.pdf",
     },
     {
       title: "Serverless Image Generation using AWS",
       description: "A project leveraging AWS services to create a serverless architecture for image generation and processing. Utilized Lambda, S3, and API Gateway for efficient image manipulation.",
       image: "/Project_2.jpg",
       tags: ["AWS", "Cloud Computing", "Serverless", "API Development"],
-      reports: "public/Project_2_Report.docx",
+      reports: "Project_2_Report.docx",
     },
   ];
 
