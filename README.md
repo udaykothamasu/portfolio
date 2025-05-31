@@ -1,18 +1,8 @@
 # Welcome to your Codechill project
 
-## Project info
-
-**URL**: https://lovable.dev/projects/26731c85-4480-48fd-9682-d774c2f401f4
-
 ## How can I edit this code?
 
 There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/26731c85-4480-48fd-9682-d774c2f401f4) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
