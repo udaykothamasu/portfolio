@@ -12,7 +12,7 @@ const SkillsSection = () => {
     {
       title: "Frontend Development",
       icon: <Code className="w-5 h-5 text-primary" />,
-      skills: ["HTML", "CSS", "JavaScript", "React.js", "Tailwind CSS", "Bootstrap"]
+      skills: ["HTML", "CSS", "JavaScript", "React.js"]
     },
     {
       title: "Programming Languages",
@@ -22,7 +22,7 @@ const SkillsSection = () => {
     {
       title: "Cloud Computing",
       icon: <Cloud className="w-5 h-5 text-primary" />,
-      skills: ["AWS Services", "Serverless Architecture", "Cloud Deployment", "EC2", "S3"]
+      skills: ["AWS Services", "Serverless Architecture", "Cloud Deployment", "EC2", "S3", "API Gate Way"]
     },
     {
       title: "Stock Market & Trading",
