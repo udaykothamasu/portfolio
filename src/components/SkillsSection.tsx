@@ -16,7 +16,7 @@ const SkillsSection = () => {
     },
     {
       title: "Operating System",
-      icon: <cpu className="w-5 h-5 text-primary" />,
+      icon: <Cpu className="w-5 h-5 text-primary" />,
       skills: ["Linux", "Windows"]
     },
     {
