@@ -10,7 +10,7 @@ const EducationSection = () => {
       institution: "Tirumala Engineering College",
       duration: "2023 - 2026",
       location: "Narasaraopet, Andhra Pradesh, India",
-      description: "Pursuing B.Tech in Computer Science Engineering with focus on core CS concepts, data structures, algorithms, and software engineering practices."
+      description: "Completed CSE Btech with 7.57 CGPA."
     },
     {
       degree: "Diploma in Electronics and Communication Engineering",
