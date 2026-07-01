@@ -38,7 +38,7 @@ const ResumeSection = () => {
               </div>
               <div className="text-center sm:text-left">
                 <h3 className="text-2xl font-bold">Uday's Resume</h3>
-                <p className="text-muted-foreground">Software Engineer & Developer</p>
+                <p className="text-muted-foreground">Web developer, Network Engineer, Cybersecurity</p>
               </div>
             </div>
             
