@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle2, Cloud, Cpu, Code, Database, Server, LineChart, BarChart, TrendingUp, DollarSign } from "lucide-react";
+import { CheckCircle2, Cloud, Cpu, Code, Database, Server, Cybersecurity, Tools, BarChart, OS, Networking } from "lucide-react";
 
 const SkillsSection = () => {
   const skillCategories = [
@@ -16,17 +16,17 @@ const SkillsSection = () => {
     },
     {
       title: "Operating System",
-      icon: <Cpu className="w-5 h-5 text-primary" />,
+      icon: <OS className="w-5 h-5 text-primary" />,
       skills: ["Linux", "Windows"]
     },
     {
       title: "Networking Security",
-      icon: <Cpu className="w-5 h-5 text-primary" />,
+      icon: <Networking className="w-5 h-5 text-primary" />,
       skills: ["TCP/IP", "OSI Model", "Network Scanning", "Routing & Switching", "VPN Concepts"]
     },
     {
       title: "CyberSecurity",
-      icon: <Cpu className="w-5 h-5 text-primary" />,
+      icon: <Cybersecurity className="w-5 h-5 text-primary" />,
       skills: ["Red Teaming Operations", "Penetration Testing", "Vulnerability Assessment", "OSINT Top 10"]
     },
     {
@@ -36,7 +36,7 @@ const SkillsSection = () => {
     },
     {
       title: "Tools ",
-      icon: <LineChart className="w-5 h-5 text-primary" />,
+      icon: <Tools className="w-5 h-5 text-primary" />,
       skills: [
         "Nmap",
         "BloodHound",
