@@ -5,11 +5,6 @@ import { CheckCircle2, Cloud, Cpu, Code, Database, Server, LineChart, BarChart, 
 const SkillsSection = () => {
   const skillCategories = [
     {
-      title: "MERN Stack Development",
-      icon: <Code className="w-5 h-5 text-primary" />,
-      skills: ["MongoDB", "Express.js", "React.js", "Node.js"]
-    },
-    {
       title: "Frontend Development",
       icon: <Code className="w-5 h-5 text-primary" />,
       skills: ["HTML", "CSS", "JavaScript", "React.js"]
@@ -17,7 +12,22 @@ const SkillsSection = () => {
     {
       title: "Programming Languages",
       icon: <Cpu className="w-5 h-5 text-primary" />,
-      skills: ["Python", "JavaScript", "TypeScript", "Java Basics"]
+      skills: ["Python"]
+    },
+    {
+      title: "Operating System",
+      icon: <Cpu className="w-5 h-5 text-primary" />,
+      skills: ["Linux", "Windows"]
+    },
+    {
+      title: "Networking Security",
+      icon: <Cpu className="w-5 h-5 text-primary" />,
+      skills: ["TCP/IP", "OSI Model", "Network Scanning", "Routing & Switching", "VPN Concepts"]
+    },
+    {
+      title: "CyberSecurity",
+      icon: <Cpu className="w-5 h-5 text-primary" />,
+      skills: ["Red Teaming Operations", "Penetration Testing", "Vulnerability Assessment", "OSINT Top 10"]
     },
     {
       title: "Cloud Computing",
@@ -25,15 +35,12 @@ const SkillsSection = () => {
       skills: ["AWS Services", "Serverless Architecture", "Cloud Deployment", "EC2", "S3", "API Gate Way"]
     },
     {
-      title: "Stock Market & Trading",
+      title: "Tools ",
       icon: <LineChart className="w-5 h-5 text-primary" />,
       skills: [
-        "Technical Analysis",
-        "Fundamental Analysis",
-        "Risk Management",
-        "Chart Patterns",
-        "Market Trends",
-        "Portfolio Management"
+        "Nmap",
+        "BloodHound",
+        "Git",
       ]
     },
   ];
