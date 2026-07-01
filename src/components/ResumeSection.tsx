@@ -5,7 +5,7 @@ import { FileText, Download, X, ExternalLink } from "lucide-react";
 
 const ResumeSection = () => {
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
-  const resumePath = "/uday resume.pdf"; // Path to your resume in public folder
+  const resumePath = "/Uday_Resume.pdf"; // Path to your resume in public folder
 
   const openPreview = () => {
     setIsPreviewOpen(true);
