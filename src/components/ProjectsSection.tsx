@@ -6,6 +6,24 @@ import { FileText } from "lucide-react";
 const ProjectsSection = () => {
   const projects = [
     {
+      title: "Active Directory Enumeration and Attack",
+      description: "Active Directory Enumeration on the red.local domain using tools such as BloodHound, Ker-brute, LDAP, and SMB enumeration to identify users, groups, and domain misconfigurations.",
+      image: "/Project_1.png",
+      tags: ["NMAP", "LDAP & SMB", "NMAP --script"],
+    },
+    {
+      title: "Mr.Robot - Penetration Testing",
+      description: "Network Scanning & enumeration, Information gathering, Information gathering, Reverse shell exploitation",
+      image: "/Project_1.png",
+      tags: ["NMAP", "WPScan", "PHP Reverse Shell"],
+    },
+    {
+      title: "Payment Gateway System",
+      description: "Developed a secure payment gateway application with user authentication and database integration.",
+      image: "/Project_1.png",
+      tags: ["HTML & CSS", "Python Flask", "JavaScript", "BootStrap", "SQL"],
+    },
+    {
       title: "Rover",
       description: "An autonomous rover built with Arduino and sensors for obstacle avoidance and environment mapping. Implemented path-finding algorithms and real-time data processing.",
       image: "/Project_1.png",
