@@ -46,7 +46,7 @@ const ResumeSection = () => {
             
             <div className="text-center mb-8">
               <p className="text-lg mb-8 max-w-2xl mx-auto">
-                My resume highlights my technical skills, project experiences, and achievements in software development. Download it for a comprehensive overview of my qualifications.
+                My resume highlights my technical skills, project experiences, and achievements. Download it for a comprehensive overview of my qualifications.
               </p>
               
               <div className="flex flex-col sm:flex-row justify-center gap-4">
