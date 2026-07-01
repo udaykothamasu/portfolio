@@ -16,17 +16,17 @@ const SkillsSection = () => {
     },
     {
       title: "Operating System",
-      icon: <Cpu className="w-5 h-5 text-primary" />,
+      icon: <cpu className="w-5 h-5 text-primary" />,
       skills: ["Linux", "Windows"]
     },
     {
       title: "Networking Security",
-      icon: <Cpu className="w-5 h-5 text-primary" />,
+      icon: <Network className="w-5 h-5 text-primary" />,
       skills: ["TCP/IP", "OSI Model", "Network Scanning", "Routing & Switching", "VPN Concepts"]
     },
     {
       title: "CyberSecurity",
-      icon: <Cpu className="w-5 h-5 text-primary" />,
+      icon: <Cybersecurity className="w-5 h-5 text-primary" />,
       skills: ["Red Teaming Operations", "Penetration Testing", "Vulnerability Assessment", "OSINT Top 10"]
     },
     {
