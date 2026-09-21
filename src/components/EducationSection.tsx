@@ -24,7 +24,7 @@ const EducationSection = () => {
       institution: "Bhashyam High School",
       duration: "2019 - 2020",
       location: "Repalle, Andhra Pradesh",
-      description: "Completed secondary education with 98%."
+      description: "Completed secondary education with 10 CGPA."
     }
   ];
 
