@@ -19,7 +19,7 @@ const ResumeSection = () => {
     // Create a temporary anchor element to trigger download
     const link = document.createElement('a');
     link.href = resumePath;
-    link.download = 'Uday_Resume.pdf'; // The filename you want for the downloaded file
+    link.download = 'uday_resume.pdf'; // The filename you want for the downloaded file
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
